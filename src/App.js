@@ -42,7 +42,7 @@ const App = () => {
     } else {
       y_delta = 0;
     }
-    
+
     for (let i = 0; i < length; i++) {
       const x = start[0] + i * x_delta;
       const y = start[1] + i * y_delta;
@@ -87,26 +87,8 @@ const App = () => {
     idRef.current = timeoutId;
   }
 
-  const AnimatedDiv = () => {
-    const [animation, setAnimation] = useState('');
-    const classes = `div ${animation}`;
-
-    const animate = () => {
-      setAnimation('animate');
-    }
-
-    const endAnimation = () => {
-      setAnimation('');
-    }
-
-    return (
-      <div className={classes} onClick={animate} onAnimationEnd={endAnimation}/>
-    )
-  }
-
   return (
     <div>
-      <AnimatedDiv />
       <LetterGrid letterGrid={grid} />
       <form onSubmit={handleWordSubmit}>
         <input name="guess" value={guess} onChange={({ target }) => setGuess(target.value)} />
