@@ -23,3 +23,19 @@ body {
   text-align: center;
   width: 34px;
 }
+
+@keyframes example {
+  0%   {background-color: green;}
+  100% {background-color: white;}
+}
+
+.div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.animate {
+  animation-name: example;
+  animation-duration: 1s;
+}

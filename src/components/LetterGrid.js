@@ -6,7 +6,7 @@ const LetterGrid = ({letterGrid}) => {
     <div>
       {letterGrid.map((row, index) =>
         <div key={index} className="board-row">
-          {row.split('').map((letter, index) => 
+          {row.map((letter, index) =>
             <Letter key={index} letter={letter} />
           )}
         </div>
