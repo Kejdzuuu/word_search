@@ -90,13 +90,12 @@ const App = () => {
   return (
     <div>
       <LetterGrid letterGrid={grid} />
-      <form onSubmit={handleWordSubmit}>
+      <form onSubmit={handleWordSubmit} autocomplete="off">
         <input name="guess" value={guess} onChange={({ target }) => setGuess(target.value)} />
         <button type="submit">GO</button>
       </form>
-      <p>{guessResult}</p>
       {successfulGuesses.map((guess, index) =>
-        <p key={index}>{guess}</p>
+        <p key={index} className="text_slide_animation">{guess}</p>
       )}
     </div>
   )

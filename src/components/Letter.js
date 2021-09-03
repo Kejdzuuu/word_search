@@ -3,7 +3,7 @@ import React from 'react';
 const Letter = ({letter}) => {
   let className = "square";
   if (letter.animate) {
-    className += " animate";
+    className += " word_highlight_animation";
   }
 
   const clearAnimation = () => {

@@ -24,18 +24,22 @@ body {
   width: 34px;
 }
 
-@keyframes example {
+@keyframes word_highlight {
   0%   {background-color: green;}
   100% {background-color: white;}
 }
 
-.div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+.word_highlight_animation {
+  animation-name: word_highlight;
+  animation-duration: 1s;
 }
 
-.animate {
-  animation-name: example;
+@keyframes text_slide {
+  0%   {margin-left: -200px;}
+  100% {margin-left: 0%;}
+}
+
+.text_slide_animation {
+  animation-name: text_slide;
   animation-duration: 1s;
 }
